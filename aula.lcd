@@ -1,0 +1,29 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 10, 5, 4, 3, 2);
+
+void setup()
+{
+  lcd.begin(16,2);                         
+}
+
+void loop()
+{
+  lcd.clear();
+  lcd.print(" Edge Computing");
+  delay(500);
+  lcd.noDisplay();
+  delay(500);
+  lcd.display();
+  delay(500);
+  
+  for(int i=0; i<=3; i++)
+    
+  { 
+    lcd.setCursor(2,1);
+  	lcd.print("Contador: ");
+    lcd.print(i);
+    lcd.print("s");
+    delay(1000);
+  }
+}
